@@ -1,5 +1,8 @@
 import requests
-from urlparse import urlparse
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 
 from onapie.exceptions import ApiException
 from onapie.exceptions import ClientException
